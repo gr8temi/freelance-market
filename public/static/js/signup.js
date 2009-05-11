@@ -20,6 +20,7 @@ $(document).ready(function(){
             }),
             processData:false,
             success:function(){
+                alert("Account successfully created")
                 location.assign('/login.html')
             },
             error : function(){
