@@ -1,22 +1,22 @@
 {
   "user": [
     {
-      "id": 1,
       "firstname": "Temidire",
       "lastname": "Adams",
       "email": "adamstemii@gmail.com",
       "address": "No 10B Prince Fadina Snago-Ota Ogun State",
-      "imgUrl": "",
-      "password": "temidire"
+      "imgUrl": "imgUrl",
+      "password": "temidire",
+      "id": 1
     },
     {
-      "id": 2,
       "firstname": "John",
       "lastname": "Peter",
       "email": "john@gmail.com",
       "address": "No 20CB Sagbo-Ota Ogun State",
-      "imgUrl": "",
-      "password": "john"
+      "imgUrl": "imgurl",
+      "password": "john",
+      "id": 2
     },
     {
       "firstname": "Oluwaseun",
@@ -26,6 +26,15 @@
       "imgUrl": "imageUrl",
       "password": "oluwaseun",
       "id": 3
+    },
+    {
+      "firstname": "Jidesco",
+      "lastname": "Jonathan",
+      "email": "oyebo@g.com",
+      "address": "iyana ipaja",
+      "imgUrl": "imageUrl",
+      "password": "john",
+      "id": 4
     }
   ],
   "skills": [
@@ -33,16 +42,10 @@
       "id": 1,
       "skill": "programming",
       "rating": 3,
-      "userId": 1
+      "userId": 4
     },
     {
-      "id": 2,
-      "skill": "Graphics Design",
-      "rating": 3,
-      "userId": 2
-    },
-    {
-      "userId": 1,
+      "userId": 3,
       "id": 3,
       "skill": "Web development",
       "rating": 3
@@ -50,32 +53,75 @@
     {
       "skill": "Voice over",
       "rating": 3,
-      "userId": 1,
+      "userId": 3,
       "id": 4
+    },
+    {
+      "skill": "Animation",
+      "userId": "4",
+      "id": 5
+    },
+    {
+      "skill": "Animation",
+      "rating": "4",
+      "userId": "4",
+      "id": 6
+    },
+    {
+      "skill": "Game development",
+      "userId": 3,
+      "id": 7
+    },
+    {
+      "skill": "Painting",
+      "rating": 5,
+      "userId": 3,
+      "id": 8
+    },
+    {
+      "skill": "Web development",
+      "rating": "4",
+      "userId": 4,
+      "id": 9
+    },
+    {
+      "skill": "Painting",
+      "rating": "5",
+      "userId": 4,
+      "id": 10
     }
   ],
-  "pastJobs": [
+  "pastJob": [
     {
       "id": 1,
       "pastJob": "A calculator app for xyz Company",
-      "userId": 1
+      "description": "I designed a calculator",
+      "userId": 3
     },
     {
       "id": 2,
       "pastJob": "An app for klm Company",
-      "userId": 2
+      "description": "I built a freelance marketplace for Decagon. This app was developed to ease the way freelance technologies work. ",
+      "userId": 4
     },
     {
       "id": 3,
       "pastJob": "A Savings app for abc Company",
-      "userId": 2
+      "description": "I designed a Savings app",
+      "userId": 3
+    },
+    {
+      "pastJob": "MockUp design",
+      "description": "I designed a mockup",
+      "userId": 4,
+      "id": 4
     }
   ],
   "services": [
     {
       "id": 1,
       "title": "Web mockups",
-      "description": "I create graphic contents for your web app",
+      "description" : "I create graphic contents for your web app",
       "userId": 2
     },
     {
@@ -89,6 +135,24 @@
       "title": "Painting",
       "description": "I create real expression painting",
       "userId": 1
+    },
+    {
+      "title": "Web development",
+      "description": "i build websites",
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "title": "Software development",
+      "description": "I develop softwares",
+      "userId": 4,
+      "id": 5
+    },
+    {
+      "title": "Game Design",
+      "description": "I can build 2D and 3D games",
+      "userId": 4,
+      "id": 6
     }
   ]
 }
