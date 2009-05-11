@@ -26,7 +26,7 @@ $(document).ready(function(){
                             </div>
                             <div class="info">
                                 <div class="title">
-                                    <a target="_blank" href="profile.html?`+data[i].id+`">`+data[i].lastname +` `+ data[i].firstname+`</a>
+                                    <a href="profile.html?`+data[i].id+`">`+data[i].lastname +` `+ data[i].firstname+`</a>
                                 </div>
                                 <div class="descr">Passionate designer</div>
                                 <div class="descr">Curious developer</div>
