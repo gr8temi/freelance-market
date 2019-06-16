@@ -1,0 +1,85 @@
+{
+    "user": [
+      {
+        "id": 1,
+        "firstname": "Temidire",
+        "lastname": "Adams",
+        "email": "adamstemii@gmail.com",
+        "address": "No 10B Prince Fadina Snago-Ota Ogun State",
+        "imgUrl": "",
+        "password": "temidire"
+      },
+      {
+        "id": 2,
+        "firstname": "John",
+        "lastname": "Peter",
+        "email": "john@gmail.com",
+        "address": "No 20CB Sagbo-Ota Ogun State",
+        "imgUrl": "",
+        "password": "john"
+      }
+    ],
+    "skills": [
+      {
+        "id": 1,
+        "skill": "programming",
+        "rating": 3,
+        "userId": 1
+      },
+      {
+        "id": 2,
+        "skill": "Graphics Design",
+        "rating": 3,
+        "userId": 2
+      },
+      {
+        "userId": 1,
+        "id": 3,
+        "skill": "Web development",
+        "rating": 3
+      },
+      {
+        "skill": "Voice over",
+        "rating": 3,
+        "userId": 1,
+        "id": 4
+      }
+    ],
+    "pastJobs": [
+      {
+        "id": 1,
+        "pastJob": "A calculator app for xyz Company",
+        "userId": 1
+      },
+      {
+        "id": 2,
+        "pastJob": "An app for klm Company",
+        "userId": 2
+      },
+      {
+        "id": 3,
+        "pastJob": "A Savings app for abc Company",
+        "userId": 2
+      }
+    ],
+    "services": [
+      {
+        "id": 1,
+        "title": "Web mockups",
+        "description": "I create graphic contents for your web app",
+        "userId": 2
+      },
+      {
+        "id": 2,
+        "title": "Backend design",
+        "description": "I create Backend Logics for web app",
+        "userId": 2
+      },
+      {
+        "id": 3,
+        "title": "Painting",
+        "description": "I create real expression painting",
+        "userId": 1
+      }
+    ]
+  }
