@@ -106,9 +106,49 @@
     .desc {
      right:0
     }
+    .login{
+        margin-top:0;
+    }
    }
 .logback{
     width:100%;
     height:100%;
     background-color: #379683;
+}
+.login{
+    background-color: #EDF5E1;
+    padding:10px;
+    margin-top:30%;
+    height: 500px;
+    width:100%;
+    box-shadow:0 0 1px 1px #05386B;
+    border-radius: 4px;
+    
+}
+.login input{
+    border-radius:0px;
+}
+.center{
+    width: 100%;
+    text-align:center;
+    align-items: center;
+}
+.login .btn{
+    margin-top:20px;
+    height:60px;
+    width:200px;
+    border-radius: 0px;
+} 
+.login .signup{
+    margin-top:50px;;
+
+}
+.brand{
+    color:#05386B;
+}
+.center .img{
+    margin-left: 20%;
+    margin-top: 20%;
+    width:400px;
+    height:400px;
 }
