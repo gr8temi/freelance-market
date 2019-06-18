@@ -36,7 +36,7 @@
 .banner{
     width:100%;
     height:600px;
-    background-color: #379683;
+    background-image:url("../img/banner1.jpg");
 }
 .ban{
     position:absolute;
@@ -313,7 +313,7 @@ height:100vh;
     color:#EDF5E1;
 }
 .jumbo{
-    background-color: #379683;
+    background-image:linear-gradient(to bottom right, #379683,#5CDB95);
     height:200px;
     text-align:center;
     margin-top: 0px;
@@ -530,7 +530,7 @@ height:100vh;
 }
 
 .card.hovercard .cardheader {
-    background-image:linear-gradient(to bottom right, #05386B,rgb(40, 107, 173));
+    background-image:url("../img/blue.jpg");
     background-size: cover;
     height: 135px;
 }
