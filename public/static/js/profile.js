@@ -64,7 +64,7 @@ $(function(){
        $.ajax({
     
    
-           url:"http://localhost:3000/user/"+query+"?_embed=pastJobs",
+           url:"http://localhost:3000/user/"+query+"?_embed=pastJob",
            dataType:"json",
            contentType:'application/json',
            data:{
@@ -75,7 +75,7 @@ $(function(){
            success:function(data){
                  
                var div = $(".past-jobs");
-               pastJob=data.pastJobs;
+               pastJob=data.pastJob;
                for(var i=0; i<pastJob.length;i++){
                    
                     var string=
