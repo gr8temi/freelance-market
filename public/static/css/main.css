@@ -176,9 +176,9 @@
     border-radius:0px;
 }
 
-.nav-tabs{
+ .nav-tabs{
 background-image:linear-gradient(to bottom right, #379683,#5CDB95);
-height:100vh;
+height:100%;
 
 }
 .nav-tabs .desc{
@@ -218,7 +218,7 @@ height:100vh;
 .nav-tabs li{
     /* border-bottom:1px solid #EDF5E1; */
 }
-.tab-content{
+.dash-tabs .nav-tabs .tab-content{
     /* background-image: linear-gradient(to bottom right, #05386B,rgb(40, 107, 173)); */
     height:100%;
 }
@@ -606,4 +606,7 @@ height:100vh;
     /* color:inherit; */
     font-weight:700;
     /* margin-bottom:16px; */
+}
+.service-form{
+padding:10px;
 }
