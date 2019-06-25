@@ -45,38 +45,22 @@
       "userId": 4
     },
     {
-      "userId": 3,
-      "id": 3,
-      "skill": "Web development",
-      "rating": 3
-    },
-    {
       "skill": "Voice over",
       "rating": 3,
       "userId": 3,
       "id": 4
     },
     {
-      "skill": "Animation",
-      "userId": "4",
-      "id": 5
+      "skill": "Web development",
+      "userId": 3,
+      "id": 5,
+      "rating": 4
     },
     {
       "skill": "Animation",
       "rating": "4",
       "userId": "4",
       "id": 6
-    },
-    {
-      "skill": "Game development",
-      "userId": 3,
-      "id": 7
-    },
-    {
-      "skill": "Painting",
-      "rating": 5,
-      "userId": 3,
-      "id": 8
     },
     {
       "skill": "Web development",
@@ -89,12 +73,24 @@
       "rating": "5",
       "userId": 4,
       "id": 10
+    },
+    {
+      "skill": "Sculpting",
+      "rating": "5",
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "skill": "Game Development",
+      "rating": "4",
+      "userId": 3,
+      "id": 12
     }
   ],
   "pastJob": [
     {
       "id": 1,
-      "pastJob": "A calculator app for xyz Company",
+      "pastJob": "A calculator app for Decagon Insitute Ajah",
       "description": "I designed a calculator",
       "userId": 3
     },
@@ -105,23 +101,23 @@
       "userId": 4
     },
     {
-      "id": 3,
-      "pastJob": "A Savings app for abc Company",
-      "description": "I designed a Savings app",
-      "userId": 3
-    },
-    {
       "pastJob": "MockUp design",
       "description": "I designed a mockup",
       "userId": 4,
       "id": 4
+    },
+    {
+      "pastJob": "Software for Soar technologies",
+      "description": "I created a rental app for Soar Technology",
+      "userId": 3,
+      "id": 5
     }
   ],
   "services": [
     {
       "id": 1,
       "title": "Web mockups",
-      "description" : "I create graphic contents for your web app",
+      "description": "I create graphic contents for your web app",
       "userId": 2
     },
     {
@@ -153,6 +149,18 @@
       "description": "I can build 2D and 3D games",
       "userId": 4,
       "id": 6
+    },
+    {
+      "title": "Security threat analysis",
+      "description": "I detect threats partaining to your Networks",
+      "userId": 3,
+      "id": 7
+    },
+    {
+      "title": "Web design and development",
+      "description": "I can create web products for you",
+      "userId": 3,
+      "id": 8
     }
   ]
 }
