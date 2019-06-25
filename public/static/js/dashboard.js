@@ -79,10 +79,9 @@ $(function(){
         },
 
     });  
-    //submitForm()
    
-          
-               $.ajax({
+         //Load Skills 
+         $.ajax({
     
    
                url:"http://localhost:3000/user/"+query+"?_embed=skills",
@@ -98,41 +97,6 @@ $(function(){
                    var div = $(".skillset");
                    skill=data.skills;
                    count=0;
-                   for(var i=0; i<skill.length;i++){
-                       count++
-                       var string=
-                       `
-                       <div class="service">
-                                    <label for="">Skill:</label><h5>`+skill[i].skill+` </h5>
-                                    <a href="#" id="" class="edit-skills" >
-                                    <span class=" glyphicon glyphicon-edit" aria-hidden="true"></span>
-                                </a>    <span style="color:red" class=" glyphicon
-                                     glyphicon-remove-circle"></span>
-                                    <p>Rating:`+skill[i].rating+`/5</p>
-
-                                    <div class="service edit-skill" style="display:none">
-                                    <form action="" method="POST" class="form-inline" role="form">
-                                 
-                                        <div class="form-group">   
-                                            <input type="text" class="form-control" id="Title" placeholder="Skill Name">
-                                        </div>
-                                        <div class="form-group">
-                                            
-                                            <input type="number" min="1" max="5" class="form-control" id="description" placeholder="Skill rating /5">
-                                        </div>
-                                    
-                                        
-                                    
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                    </form>
-                                </div>
-                        </div>
-                        
-                       `;
-                       
-                       div.append(string);
-                   
-                   }
                    var string1=`
                    <div class="service skill-form" style="display:none;">
                    
@@ -152,13 +116,68 @@ $(function(){
                         <button id="submit-skill" class="btn btn-primary">Submit</button>
                     
                     </div>
+                    <div class="service edit-skill" style="display:none">                        
+                        <div class="form-group">   
+                        <select name="skill-option" id="skill-option" class="form-control" required="required">
+                        <option value="">-------------</option>
+                        ${skill.map((item,i)=>`
+
+                        
+                        <option value="${item.id}" values="${item.skill}" rate="${item.rating}">${item.skill}</option>
+                        `
+                        )}
+                        </select>
+                        <a class="pencil-skill" href="#"  >
+                            <button style="margin:2px;" class="btn btn-primary">Edit</button>
+                        </a>
+                        <a class="skill-delete" href="#">
+                        <input type="hidden" class="skill-delete-id">
+                        <button style="margin:2px;" class="btn btn-danger">Delete</button>
+                        </a>
+                        </div>
+                        <div class="form-group pencil-form-skill" id="" style="display:none;">
+                        <label>Skill Name</label>
+                            <input type="text" class="form-control" id="skill-name" required>
+                            <input type="hidden" id="skill-hidden-id">
+                        <label>Ratings</label>
+                            <input  type="number" min="1" max="5" class="form-control" id="skill-description" placeholder="Skill rating /5" required>
+                       <button  class="skill-edit-button btn btn-primary">Submit</button>
+                            </div>
+                    
+                        
+                    
+                        
+                    
+                </div>
                    `;
-                     div.append(string1);  
+                     div.append(string1); 
+                     drop= $("#drop1")
+                   for(var i=0; i<skill.length;i++){
+                       count++
+                      var string5= 
+                      `<option value="">jaguda</option>
+                      `;
+                      drop.append(string5)
+                       var string=
+                       `
+                       <div class="service">
+                                    <label for="">Skill:</label><h5>`+skill[i].skill+` </h5>
+                                   <p>Rating:`+skill[i].rating+`/5</p>
+
+                                   
+                        </div>
+                        
+                       `;
+                       
+                       div.append(string);
+                   
+                   }
+ 
                      submitForm()          
                },
                type:'GET',
            });  
-       
+       //Load Past Jobs
        $.ajax({
     
    
@@ -174,22 +193,6 @@ $(function(){
                  
                var div = $(".past-jobs");
                pastJob=data.pastJob;
-               for(var i=0; i<pastJob.length;i++){
-                   
-                    var string=
-                   `
-   
-                   <div class="service">
-                        <label for="">Title: </label><h5>`+` `+pastJob[i].pastJob+`</h5>
-                        <p>`+pastJob[i].description+`
-                        </p>
-                    </div>
-                   
-                   
-                   `;
-                   div.append(string);
-               
-               }
                var string1=`
                <div class="service pastjob-form" style="display:none;">
                
@@ -209,8 +212,53 @@ $(function(){
                     <button id="submit-pastjob" class="btn btn-primary">Submit</button>
                 
                 </div>
+
+                <div class="service pastjob-edit-form" style="display:none">                        
+                <div class="form-group">   
+                <select name="pastjob-option" id="pastjob-option" class="form-control" required="required">
+                <option value="">-------------</option>
+                ${pastJob.map((item,i)=>`
+
+                
+                <option value="${item.id}" pvalues="${item.pastJob}" describe="${item.description}">${item.pastJob}</option>
+                `
+                )}
+                </select>
+                <a class="pencil-pastjob" href="#"  >
+                    <button style="margin:2px;" class="btn btn-primary">Edit</button>
+                </a>
+                <a class="pastjob-delete" href="#">
+                <input type="hidden" class="pastjob-delete-id">
+                <button style="margin:2px;" class="btn btn-danger">Delete</button>
+                </a>
+                </div>
+                <div class="form-group pencil-form-pastjob" id="" style="display:none;">
+                <label>Past Job</label>
+                    <input type="text" class="form-control" id="pastjob-name" required>
+                    <input type="hidden" id="pastjob-hidden-id">
+                <label>Description</label>
+                    <input type="text" class="form-control" id="pastjob-description" required>
+               <button  class="pastjob-edit-button btn btn-primary">Submit</button>
+                    </div>
                `;
-                 div.append(string1); 
+                 div.append(string1);
+               for(var i=0; i<pastJob.length;i++){
+                   
+                    var string=
+                   `
+   
+                   <div class="service">
+                        <label for="">Title: </label><h5>`+` `+pastJob[i].pastJob+`</h5>
+                        <p>`+pastJob[i].description+`
+                        </p>
+                    </div>
+                   
+                   
+                   `;
+                   div.append(string);
+               
+               }
+                
                  submitForm()
                        
                        
@@ -219,7 +267,7 @@ $(function(){
            },
            type:'GET',
        });  
-       
+       //Load Services
        $.ajax({
     
    
@@ -232,26 +280,10 @@ $(function(){
            // dataType:'jsonp',
       
            success:function(data){
-                 
+            
                var div = $(".service-render");
                service=data.services;
                count=0;
-               for(var i=0; i<service.length;i++){
-                   count++
-                   var string=
-                   `
-   
-                   <div class="service">
-                                <label for="">Service Title: </label><h5>`+service[i].title +`</h5>
-                                <p>`+service[i].description+`</p>
-                    </div>
-                   
-                   `;
-                   // li.innerHTML = 
-                   // localStorage.setItem('user', JSON.stringify(data))
-                   div.append(string);
-               
-               }
                var string1=`
                <div class="service-form" style="display:none;">
                
@@ -271,8 +303,53 @@ $(function(){
            
                <button id="service-submit" class="btn btn-primary">Submit</button>
                 </div>
+                <div class="service service-edit-form" style="display:none">                        
+                <div class="form-group">   
+                <select name="service-option" id="service-option" class="form-control" required="required">
+                <option value="">-------------</option>
+                ${service.map((item,i)=>`
+
+                
+                <option value="${item.id}" pvalues="${item.title}" describe="${item.description}">${item.title}</option>
+                `
+                )}
+                </select>
+                <a class="pencil-service" href="#"  >
+                    <button style="margin:2px;" class="btn btn-primary">Edit</button>
+                </a>
+                <a class="service-delete" href="#">
+                <input type="hidden" class="service-delete-id">
+                <button style="margin:2px;" class="btn btn-danger">Delete</button>
+                </a>
+                </div>
+                <div class="form-group pencil-form-service" id="" style="display:none;">
+                <label>Service</label>
+                    <input type="text" class="form-control" id="service-name" required>
+                    <input type="hidden" id="service-hidden-id">
+                <label>Description</label>
+                    <input type="text" class="form-control" id="service-description" required>
+               <button  class="service-edit-button btn btn-primary">Submit</button>
+                    </div>
+
                `;
                  div.append(string1); 
+               for(var i=0; i<service.length;i++){
+                   count++
+                   var string=
+                   `
+   
+                   <div class="service">
+                                <label for="">Service Title: </label><h5>`+service[i].title +`</h5>
+                                <p>`+service[i].description+`</p>
+                    </div>
+                   
+                   `;
+                   // li.innerHTML = 
+                   // localStorage.setItem('user', JSON.stringify(data))
+                   div.append(string);
+               
+               }
+
                  submitForm() 
                    
                
@@ -281,15 +358,18 @@ $(function(){
        }); 
 
     $(".service-edit").click(function(){
-         $(".service-form").toggle();   
+         $(".service-form").toggle();  
+         $(".service-edit-form").hide(); 
        
     });
     $(".skill-edit").click(function(){
         $(".skill-form").toggle();
+        $(".edit-skill").hide();
     });
 
     $(".pastjob-edit").click(function(){
         $(".pastjob-form").toggle();
+        $(".pastjob-edit-form").hide();
     });
     $(".account-edit").click(function(){
         $(".account-form").toggle();
@@ -297,10 +377,20 @@ $(function(){
     
 
     $(".edit-skills").on("click",function(){
-        console.log("working")
-           // $(".edit-skill").toggle();
+        // console.log("working")
+        $(".edit-skill").toggle();
+        $(".skill-form").hide();
     });
-
+    $("#edit-pastjobs").unbind().click(function(e){
+        // console.log("working")
+        $(".pastjob-edit-form").toggle();
+        $(".pastjob-form").hide();
+    });
+    $("#edit-services").unbind().click(function(e){
+        // console.log("working")
+        $(".service-edit-form").toggle();
+        $(".service-form").hide();
+    });
 })
 
 function submitForm(){
@@ -350,28 +440,7 @@ function submitForm(){
                 `
                 <div class="service skillset">
                              <label for="">Skill:</label><h5>`+data.skill+` </h5>
-                             <a href="#" id="" class="edit-skills" >
-                             <span class=" glyphicon glyphicon-edit" aria-hidden="true"></span>
-                         </a>    <span style="color:red" class=" glyphicon
-                              glyphicon-remove-circle"></span>
-                             <p>Rating:`+data.rating+`/5</p>
-
-                             <div class="service edit-skill" style="display:none">
-                             <form action="" method="POST" class="form-inline" role="form">
-                          
-                                 <div class="form-group">   
-                                     <input type="text" class="form-control" id="Title" placeholder="Skill Name">
-                                 </div>
-                                 <div class="form-group">
-                                     
-                                     <input type="number" min="1" max="5" class="form-control" id="description" placeholder="Skill rating /5">
-                                 </div>
-                             
-                                 
-                             
-                                 <button type="submit" class="btn btn-primary">Submit</button>
-                             </form>
-                         </div>
+                             <p>Rating:`+data.rating+`/5</p>    
                  </div>
                  
                 `;
@@ -462,7 +531,11 @@ function submitForm(){
     })
     
 $("#delete-user").unbind().click(function(e){
+    
     e.preventDefault();
+    let yes= confirm("Confirm Delete")
+    if (yes==true){
+    let query1=location.search.substring(1);
     $.ajax({
         
         url:"http://localhost:3000/user/"+query1,
@@ -478,5 +551,228 @@ $("#delete-user").unbind().click(function(e){
         },
         type:'DELETE'
     })
-    })
+}
+    })    
+
+//Edit Skills
+    $(".pencil-skill").unbind().click(function(e){
+        e.preventDefault();
+        // console.log("working")
+        $(".pencil-form-skill").toggle();
+    });
+    $("#skill-option").unbind().change(function(e){
+        e.preventDefault();
+        //skill-name
+        $("#skill-hidden-id").val($("#skill-option").val())
+        $(".skill-delete-id").val($("#skill-option").val())
+        $("#skill-name").val($('option:selected',this).attr('values'))
+        $("#skill-description").val($('option:selected',this).attr('rate'))
+    });
+
+$(".skill-edit-button").unbind().click(function(e){
+let value=$("#skill-name").val();
+let skillDesc=parseInt($("#skill-description").val());
+let skillId=parseInt($("#skill-hidden-id").val());
+$.ajax({
+            
+    url:"http://localhost:3000/skills/"+skillId,
+    dataType:'json',
+    type:'PATCH',
+    contentType:'application/json',
+    data :JSON.stringify({
+        "skill":value,
+        "rating":skillDesc,
+        "userId":parseInt(query1)
+    }),
+    processData:false,
+    success:function(){
+        alert("Your skill has been updated")
+        location.reload();
+    },
+    error : function(){
+        alert("error");
+    },
+    
+})
+
+})
+$(".skill-delete").unbind().click(function(e){
+    
+    // console.log(skillId);
+    let txt="";
+    let yes= confirm("Confirm Delete")
+    if (yes==true){
+    let skillId=parseInt($(".skill-delete-id").val());
+     $.ajax({
+        
+        url:"http://localhost:3000/skills/"+skillId,
+        dataType:'json',
+        contentType:'application/json',
+        processData:false,
+        success:function(){
+            alert("Skill successfully deleted")
+            location.reload();
+        },
+        error : function(){
+            alert("error");
+        },
+        type:'DELETE'
+    })       
+    }
+    else{
+        txt="canceled";
+    }
+
+})
+
+$(".pencil-skill").unbind().click(function(e){
+    e.preventDefault();
+    // console.log("working")
+    $(".pencil-form-skill").toggle();
+});
+//Edit Pastjobs
+$(".pencil-pastjob").unbind().click(function(e){
+    e.preventDefault();
+    // console.log("working")
+    $(".pencil-form-pastjob").toggle();
+});
+$("#pastjob-option").unbind().change(function(e){
+    e.preventDefault();
+    //skill-name
+    $("#pastjob-hidden-id").val($("#pastjob-option").val())
+    $(".pastjob-delete-id").val($("#pastjob-option").val())
+    $("#pastjob-name").val($('option:selected',this).attr('pvalues'))
+    $("#pastjob-description").val($('option:selected',this).attr('describe'))
+});
+
+$(".pastjob-edit-button").unbind().click(function(e){
+let value=$("#pastjob-name").val();
+let pastDesc=$("#pastjob-description").val();
+let pastjobId=parseInt($("#pastjob-hidden-id").val());
+$.ajax({
+        
+url:"http://localhost:3000/pastJob/"+pastjobId,
+dataType:'json',
+type:'PATCH',
+contentType:'application/json',
+data :JSON.stringify({
+    "pastJob":value,
+    "description":pastDesc,
+    "userId":parseInt(query1)
+}),
+processData:false,
+success:function(){
+    alert("Your Past jobs has been updated")
+    location.reload();
+},
+error : function(){
+    alert("error");
+},
+
+})
+
+})
+$(".pastjob-delete").unbind().click(function(e){
+
+// console.log(skillId);
+let txt="";
+let yes= confirm("Confirm Delete")
+if (yes==true){
+let pastjobId=parseInt($(".pastjob-delete-id").val());
+console.log(pastjobId)
+ $.ajax({
+    
+    url:"http://localhost:3000/pastJob/"+pastjobId,
+    dataType:'json',
+    contentType:'application/json',
+    processData:false,
+    success:function(){
+        alert("Past job successfully deleted")
+        location.reload();
+        
+    },
+    error : function(){
+        alert("error");
+    },
+    type:'DELETE'
+})       
+}
+else{
+    txt="canceled";
+}
+
+})
+
+//Edit Services
+$(".pencil-service").unbind().click(function(e){
+    e.preventDefault();
+    // console.log("working")
+    $(".pencil-form-service").toggle();
+});
+$("#service-option").unbind().change(function(e){
+    e.preventDefault();
+    //skill-name
+    $("#service-hidden-id").val($("#service-option").val())
+    $(".service-delete-id").val($("#service-option").val())
+    $("#service-name").val($('option:selected',this).attr('pvalues'))
+    $("#service-description").val($('option:selected',this).attr('describe'))
+});
+
+$(".service-edit-button").unbind().click(function(e){
+let value=$("#service-name").val();
+let serDesc=$("#service-description").val();
+let serviceId=parseInt($("#service-hidden-id").val());
+$.ajax({
+        
+url:"http://localhost:3000/services/"+serviceId,
+dataType:'json',
+type:'PATCH',
+contentType:'application/json',
+data :JSON.stringify({
+    "title":value,
+    "description":serDesc,
+    "userId":parseInt(query1)
+}),
+processData:false,
+success:function(){
+    alert("Your Service has been updated");
+    location.reload();
+},
+error : function(){
+    alert("error");
+},
+
+})
+
+})
+$(".service-delete").unbind().click(function(e){
+
+// console.log(skillId);
+let txt="";
+let yes= confirm("Confirm Delete")
+if (yes==true){
+let serviceId=parseInt($(".service-delete-id").val());
+console.log(serviceId)
+ $.ajax({
+    
+    url:"http://localhost:3000/services/"+serviceId,
+    dataType:'json',
+    contentType:'application/json',
+    processData:false,
+    success:function(){
+        alert("Service successfully deleted")
+        location.reload();
+        
+    },
+    error : function(){
+        alert("error");
+    },
+    type:'DELETE'
+})       
+}
+else{
+    txt="canceled";
+}
+
+})
 }

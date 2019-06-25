@@ -17,7 +17,10 @@ $(document).ready(function(){
         success:function(data){
             console.log(data.length)
             if(data.length==0){
-                location.assign('http://localhost:3000/signup.html')
+                // location.assign('http://localhost:3000/signup.html')
+                $(".emails").addClass("has-error")
+                $(".pass").addClass("has-error")
+                $(".log-error").show();
             }
             else{
              $.each(data, function(i,info){
