@@ -19,7 +19,7 @@
       "id": 2
     },
     {
-      "firstname": "Oluwaseun",
+      "firstname": "Seun",
       "lastname": "Oyebowale",
       "email": "oyebowalemuiz@gmail.com",
       "address": "No 54 prince Fadina street Sango Ota",
@@ -35,6 +35,24 @@
       "imgUrl": "imageUrl",
       "password": "john",
       "id": 4
+    },
+    {
+      "firstname": "James",
+      "lastname": "Lanre",
+      "email": "james@gmail.com",
+      "address": "No 54 prince Fadina street Sango Ota",
+      "imgUrl": "img url",
+      "password": "jamesco",
+      "id": 5
+    },
+    {
+      "firstname": "James",
+      "lastname": "Lanre",
+      "email": "jameson@gmail.com",
+      "address": "No 54 prince Fadina street Sango Ota",
+      "imgUrl": "img url",
+      "password": "oluwaseun",
+      "id": 6
     }
   ],
   "skills": [

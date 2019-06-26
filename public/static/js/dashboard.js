@@ -413,7 +413,8 @@ function submitForm(){
             }),
             processData:false,
             success:function(){
-                alert("uploaded")
+                alert("uploaded");
+                location.reload();
             },
             error : function(){
                 alert("error");
