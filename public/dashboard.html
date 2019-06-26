@@ -1,0 +1,173 @@
+<html>
+<head>
+<link rel="stylesheet" href="static\css\bootstrap.min.css">
+<link rel="stylesheet" href="static\css\main.css">
+<script src="static/js/jquery.min.js"></script>
+
+</head>
+<body >
+ 
+
+ 
+ <nav class="navbar navbar-default" role="navigation">
+     <!-- Brand and toggle get grouped for better mobile display -->
+     <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="index.html">Market square</a>
+     </div>
+ </nav>
+
+<div role="tabpanel" class="row">
+    <!-- Nav tabs -->
+    <div class="col-md-3 dash-tabs">
+    
+    <ul class="nav nav-tabs  nav-stacked" role="tablist">
+        <div class="row">
+            <div class="col-md-2"></div>
+        
+        <div class="col-md-8">
+         <img src="static/img/adams.jpg" class=" img-circle img-thumbnail img-responsive" alt="Image"> 
+         <h5 class="desc name"></h5>
+
+        </div>
+        <div class="col-md-2"></div>
+        </div>
+        
+        <li role="presentation" class="active">
+            <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+            
+             <h4 class="listext">Profile</h4> 
+             <span style="float:right;" class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            </a>
+        </li>
+    
+            <li role="presentation">
+                    <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
+                            <h4 class="listext">Account Settings</h4> 
+                            <span style="float:right;" class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
+            </li>
+    </ul>
+        </div>
+<!-- nCbj28c9I8 -->
+
+    <!-- Tab panes -->
+    <div class="col-md-9">
+    <div class="tab-content">
+        <div role="tabpanel" class="row tab-pane active" id="home">
+            <div class="col-md-12">
+              <div class="col-md-6">
+                <div class="services">
+                    <div class="services-head">
+                        <h2 class="dashead">Services Rendered</h2>
+                    <a class="service-edit" style="cursor: pointer;" >
+                        <span style="float:right; color:#EDF5E1" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </a>
+                    <a id="edit-services" style="cursor: pointer;" >
+                        <span style="padding:2px 2px 0 0; margin-right:5px;float:right; color:#EDF5E1" class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    </a> 
+                    </div>
+                    <div class="services-body service-render">
+                        
+                    </div>
+   
+
+                    
+                </div>
+                <div class="services">
+                                <div class="services-head">
+                                    <h2 class="dashead">Past Jobs</h2>
+                                <a style="cursor: pointer;" class="pastjob-edit" >
+                                    <span style="float:right; color:#EDF5E1" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                </a>
+                                <a id="edit-pastjobs" style="cursor: pointer;"  >
+                                    <span style="padding:2px 2px 0 0; margin-right:5px;float:right; color:#EDF5E1" class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                </a> 
+                                </div>
+                                <div class="services-body past-jobs">
+                                    
+                                </div>
+                                
+                            </div>
+              </div> 
+            <div class="col-md-6">
+                    <div class="services">
+                            <div class="services-head">
+                                <h2 class="dashead">Skills</h2>
+                            <a class="skill-edit" style="cursor: pointer;"  >
+                                <span style="padding:2px 2px 0 0;float:right; color:#EDF5E1" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                            </a>
+                            <a class="edit-skills" style="cursor: pointer;"  >
+                                <span style="padding:2px 2px 0 0; margin-right:5px;float:right; color:#EDF5E1" class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            </a> 
+                            </div>
+                            
+                            <div class="services-body skillset ">
+                             
+                                 
+                            </div>
+                              
+                        </div>
+                        
+                        
+                        
+                        
+            </div>     
+              
+            </div> 
+            
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="settings">
+            <div class="col-md-12">
+                    <div class="services">
+                            <div class="services-head">
+                                <h2 class="dashead">Account Details</h2>
+                            <a style="cursor: pointer;" class="account-edit">
+                                <span style="float:right; color:#EDF5E1" class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            </a> 
+                            </div>
+                            <div class="services-body">
+                                <div class="service info">
+                                    
+                                </div>
+                               
+                        </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+                <div class="services">
+                        <div class="delete">
+                            <h2 class="dashead">Delete Account</h2>
+                        
+                        </div>
+                        <div class="services-body">
+                            <div class="service">
+                                <p>This action is irriversible and we strongly advise you dont come to this section. To proceed with this click the delete button
+
+                                </p>
+                                <div class="btn-del">
+                                    <button id="delete-user" class="btn btn-danger">Delete Account</button>
+                                </div>
+                                
+                            </div>
+                           
+                    </div>
+        </div>
+    </div>
+    </div>        
+    </div>
+
+</div>
+
+
+<!-- <a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Trigger modal</a> -->
+ </body>
+ <!-- <script src="static\js\jquery.min.js"></script> -->
+ <script src="static\js\bootstrap.min.js"></script>
+ <script src="static/js/dashboard.js"></script>
+ </html>

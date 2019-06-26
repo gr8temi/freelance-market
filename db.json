@@ -1,0 +1,172 @@
+{
+  "user": [
+    {
+      "firstname": "Temidire",
+      "lastname": "Adams",
+      "email": "adamstemii@gmail.com",
+      "address": "No 10B Prince Fadina Snago-Ota Ogun State",
+      "imgUrl": "imgUrl",
+      "password": "temidire",
+      "id": 1
+    },
+    {
+      "firstname": "John",
+      "lastname": "Peter",
+      "email": "john@gmail.com",
+      "address": "No 20CB Sagbo-Ota Ogun State",
+      "imgUrl": "imgurl",
+      "password": "john",
+      "id": 2
+    },
+    {
+      "firstname": "Oluwaseun",
+      "lastname": "Oyebowale",
+      "email": "oyebowalemuiz@gmail.com",
+      "address": "No 54 prince Fadina street Sango Ota",
+      "imgUrl": "imageUrl",
+      "password": "oluwaseun",
+      "id": 3
+    },
+    {
+      "firstname": "Jidesco",
+      "lastname": "Jonathan",
+      "email": "oyebo@g.com",
+      "address": "iyana ipaja",
+      "imgUrl": "imageUrl",
+      "password": "john",
+      "id": 4
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "skill": "programming",
+      "rating": 3,
+      "userId": 4
+    },
+    {
+      "skill": "Voice over",
+      "rating": 3,
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "skill": "Web development",
+      "userId": 3,
+      "id": 5,
+      "rating": 4
+    },
+    {
+      "skill": "Animation",
+      "rating": "4",
+      "userId": "4",
+      "id": 6
+    },
+    {
+      "skill": "Web development",
+      "rating": "4",
+      "userId": 4,
+      "id": 9
+    },
+    {
+      "skill": "Painting",
+      "rating": "5",
+      "userId": 4,
+      "id": 10
+    },
+    {
+      "skill": "Sculpting",
+      "rating": "5",
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "skill": "Game Development",
+      "rating": "4",
+      "userId": 3,
+      "id": 12
+    }
+  ],
+  "pastJob": [
+    {
+      "id": 1,
+      "pastJob": "A calculator app for Decagon Insitute Ajah",
+      "description": "I designed a calculator",
+      "userId": 3
+    },
+    {
+      "id": 2,
+      "pastJob": "An app for klm Company",
+      "description": "I built a freelance marketplace for Decagon. This app was developed to ease the way freelance technologies work. ",
+      "userId": 4
+    },
+    {
+      "pastJob": "MockUp design",
+      "description": "I designed a mockup",
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "pastJob": "Software for Soar technologies",
+      "description": "I created a rental app for Soar Technology",
+      "userId": 3,
+      "id": 5
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "title": "Web mockups",
+      "description": "I create graphic contents for your web app",
+      "userId": 2
+    },
+    {
+      "id": 2,
+      "title": "Backend design",
+      "description": "I create Backend Logics for web app",
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "title": "Painting",
+      "description": "I create real expression painting",
+      "userId": 1
+    },
+    {
+      "title": "Web development",
+      "description": "i build websites",
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "title": "Software development",
+      "description": "I develop softwares",
+      "userId": 4,
+      "id": 5
+    },
+    {
+      "title": "Game Design",
+      "description": "I can build 2D and 3D games",
+      "userId": 4,
+      "id": 6
+    },
+    {
+      "title": "Security threat analysis",
+      "description": "I detect threats partaining to your Networks",
+      "userId": 3,
+      "id": 7
+    },
+    {
+      "title": "Web design and development",
+      "description": "I can create web products for you",
+      "userId": 3,
+      "id": 8
+    },
+    {
+      "title": "Laundry",
+      "description": "Washing of laundry",
+      "userId": 5,
+      "id": 9
+    }
+  ]
+}
