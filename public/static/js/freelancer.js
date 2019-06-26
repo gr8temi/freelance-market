@@ -1,7 +1,7 @@
 $(document).ready(function(){
     console.log(localStorage)
     $.ajax({
-        url:"http://localhost:3000/user",
+        url:"/user",
         dataType:"json",
         contentType:'application/json',
         data:{

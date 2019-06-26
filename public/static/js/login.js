@@ -5,7 +5,7 @@ $(document).ready(function(){
         var email = $("#log-email").val()
         var password = $("#log-password").val()
         $.ajax({
-        url:"http://localhost:3000/user?email="+email+"&password="+password,
+        url:"/user?email="+email+"&password="+password,
         dataType:'json',
         type:'GET',
         data:{
@@ -25,7 +25,7 @@ $(document).ready(function(){
             else{
              $.each(data, function(i,info){
                 
-                location.assign('http://localhost:3000/dashboard.html?'+info.id)
+                location.assign('/dashboard.html?'+info.id)
             })   
             }
             

@@ -6,7 +6,7 @@ $(document).ready(function(){
         // console.log(forms)
         $.ajax({
             
-            url:"http://localhost:3000/user",
+            url:"/user",
             
             dataType:'json',
             contentType:'application/json',
@@ -20,7 +20,7 @@ $(document).ready(function(){
             }),
             processData:false,
             success:function(){
-                location.assign('http://localhost:3000/login.html')
+                location.assign('/login.html')
             },
             error : function(){
                 alert("error");
