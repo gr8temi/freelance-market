@@ -3,7 +3,7 @@ $(function(){
     $.ajax({
  
 
-        url:"http://localhost:3000/user/"+query,
+        url:"/user/"+query,
         dataType:"json",
         contentType:'application/json',
         data:{
@@ -28,7 +28,7 @@ $(function(){
                $.ajax({
     
    
-               url:"http://localhost:3000/user/"+query+"?_embed=skills",
+               url:"/user/"+query+"?_embed=skills",
                dataType:"json",
                contentType:'application/json',
                data:{
@@ -64,7 +64,7 @@ $(function(){
        $.ajax({
     
    
-           url:"http://localhost:3000/user/"+query+"?_embed=pastJob",
+           url:"/user/"+query+"?_embed=pastJob",
            dataType:"json",
            contentType:'application/json',
            data:{
@@ -108,7 +108,7 @@ $(function(){
        $.ajax({
     
    
-           url:"http://localhost:3000/user/"+query+"?_embed=services",
+           url:"/user/"+query+"?_embed=services",
            dataType:"json",
            contentType:'application/json',
            data:{

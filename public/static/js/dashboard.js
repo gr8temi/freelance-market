@@ -2,7 +2,7 @@ $(function(){
     let query=location.search.substring(1);
     $.ajax({
         type:'GET',
-        url:"http://localhost:3000/user/"+query,
+        url:"/user/"+query,
         dataType:"json",
         contentType:'application/json',
         data:{
@@ -84,7 +84,7 @@ $(function(){
          $.ajax({
     
    
-               url:"http://localhost:3000/user/"+query+"?_embed=skills",
+               url:"/user/"+query+"?_embed=skills",
                dataType:"json",
                contentType:'application/json',
                data:{
@@ -181,7 +181,7 @@ $(function(){
        $.ajax({
     
    
-           url:"http://localhost:3000/user/"+query+"?_embed=pastJob",
+           url:"/user/"+query+"?_embed=pastJob",
            dataType:"json",
            contentType:'application/json',
            data:{
@@ -271,7 +271,7 @@ $(function(){
        $.ajax({
     
    
-           url:"http://localhost:3000/user/"+query+"?_embed=services",
+           url:"/user/"+query+"?_embed=services",
            dataType:"json",
            contentType:'application/json',
            data:{
@@ -400,7 +400,7 @@ function submitForm(){
         e.preventDefault();
         $.ajax({
             
-            url:"http://localhost:3000/user/"+query1,
+            url:"/user/"+query1,
             dataType:'json',
             contentType:'application/json',
             data :JSON.stringify({
@@ -425,7 +425,7 @@ function submitForm(){
         e.preventDefault();
             let user=parseInt($("#user").val())
         $.ajax({
-            url:"http://localhost:3000/skills",
+            url:"/skills",
             dataType:'json',
             contentType:'application/json',
             data :JSON.stringify({
@@ -457,7 +457,7 @@ function submitForm(){
         e.preventDefault();
             let user=parseInt($("#user").val())
         $.ajax({
-            url:"http://localhost:3000/services",
+            url:"/services",
             dataType:'json',
             contentType:'application/json',
             data :JSON.stringify({
@@ -494,7 +494,7 @@ function submitForm(){
         e.preventDefault();
             let user=parseInt($("#user").val())
         $.ajax({
-            url:"http://localhost:3000/pastJob",
+            url:"/pastJob",
             dataType:'json',
             contentType:'application/json',
             data :JSON.stringify({
@@ -538,13 +538,13 @@ $("#delete-user").unbind().click(function(e){
     let query1=location.search.substring(1);
     $.ajax({
         
-        url:"http://localhost:3000/user/"+query1,
+        url:"/user/"+query1,
         dataType:'json',
         contentType:'application/json',
         processData:false,
         success:function(){
             
-                location.assign('http://localhost:3000/')
+                location.assign('/')
         },
         error : function(){
             alert("error");
@@ -575,7 +575,7 @@ let skillDesc=parseInt($("#skill-description").val());
 let skillId=parseInt($("#skill-hidden-id").val());
 $.ajax({
             
-    url:"http://localhost:3000/skills/"+skillId,
+    url:"/skills/"+skillId,
     dataType:'json',
     type:'PATCH',
     contentType:'application/json',
@@ -605,7 +605,7 @@ $(".skill-delete").unbind().click(function(e){
     let skillId=parseInt($(".skill-delete-id").val());
      $.ajax({
         
-        url:"http://localhost:3000/skills/"+skillId,
+        url:"/skills/"+skillId,
         dataType:'json',
         contentType:'application/json',
         processData:false,
@@ -651,7 +651,7 @@ let pastDesc=$("#pastjob-description").val();
 let pastjobId=parseInt($("#pastjob-hidden-id").val());
 $.ajax({
         
-url:"http://localhost:3000/pastJob/"+pastjobId,
+url:"/pastJob/"+pastjobId,
 dataType:'json',
 type:'PATCH',
 contentType:'application/json',
@@ -682,7 +682,7 @@ let pastjobId=parseInt($(".pastjob-delete-id").val());
 console.log(pastjobId)
  $.ajax({
     
-    url:"http://localhost:3000/pastJob/"+pastjobId,
+    url:"/pastJob/"+pastjobId,
     dataType:'json',
     contentType:'application/json',
     processData:false,
@@ -724,7 +724,7 @@ let serDesc=$("#service-description").val();
 let serviceId=parseInt($("#service-hidden-id").val());
 $.ajax({
         
-url:"http://localhost:3000/services/"+serviceId,
+url:"/services/"+serviceId,
 dataType:'json',
 type:'PATCH',
 contentType:'application/json',
@@ -755,7 +755,7 @@ let serviceId=parseInt($(".service-delete-id").val());
 console.log(serviceId)
  $.ajax({
     
-    url:"http://localhost:3000/services/"+serviceId,
+    url:"/services/"+serviceId,
     dataType:'json',
     contentType:'application/json',
     processData:false,
