@@ -53,6 +53,15 @@
       "imgUrl": "img url",
       "password": "oluwaseun",
       "id": 6
+    },
+    {
+      "firstname": "Junior",
+      "lastname": "James",
+      "email": "adamstemi@gmail.com",
+      "address": "No 54 prince Fadina street Sango Ota",
+      "imgUrl": "url",
+      "password": "oluwaseun",
+      "id": 7
     }
   ],
   "skills": [
